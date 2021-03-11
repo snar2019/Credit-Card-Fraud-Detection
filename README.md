@@ -18,7 +18,18 @@ Given the class imbalance ratio, we recommend measuring the accuracy using the A
 Acknowledgements
 The dataset has been collected and analysed during a research collaboration of Worldline and the Machine Learning Group (http://mlg.ulb.ac.be) of ULB (Université Libre de Bruxelles) on big data mining and fraud detection. More details on current and past projects on related topics are available on https://www.researchgate.net/project/Fraud-detection-5 and the page of the DefeatFraud project
 
-#### Observations After Model Building:
+**************************************
+
+### Model Prediction
+Now it is the time to start building the model. The type of algorithms we are going to use to try to do anamoly detection on this datasets are as follows.
+
+Isolation Forest Algorithm :
+The algorithm is based on the fact that anomalies are data points that are few and different. As a result of these properties, anomalies are susceptible to a mechanism called isolation.
+
+Local Outlier Factor (LOF) Algorithm :
+The LOF algorithm is an unsupervised outlier detection method which computes the local density deviation of a given data point with respect to its neighbors. It considers as outlier samples that have a substantially lower density than their neighbors.
+
+### Observations After Model Building:
 Isolation Forest detected 73 errors versus Local Outlier Factor detecting 97 errors vs. SVM detecting 8516 errors
 Isolation Forest has a 99.74% more accurate than LOF of 99.65% and SVM of 70.09
 When comparing error precision & recall for 3 models , the Isolation Forest performed much better than the LOF as we can see that the detection of fraud cases is around 27 % versus LOF detection rate of just 2 % and SVM of 0%.
